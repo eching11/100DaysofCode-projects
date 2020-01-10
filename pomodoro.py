@@ -14,6 +14,17 @@ import time
 import os
 import subprocess
 
+
+def countdown(t):
+	while t:
+		mins, secs = divmod(t, 60)
+		timeformat = '{:02d}:{:02d}'.format(mins, secs)
+		print(timeformat, end='\r')
+		time.sleep(1)
+		t -= 1
+	print('Copying access code from current Url...\n')
+#countdown(67)
+
 def getName(nameTask):
 	print('Name of pomodoro task:')
 	nameTask = input()
@@ -27,7 +38,8 @@ def banner(nameTask):
 	print('Starting... ')
 
 def timer(nameTask, time):
-	subprocess.call(["sleep", time], stdin=None, stderr=None, shell=False)
+	#subprocess.call(["sleep", time], stdin=None, stderr=None, shell=False)
+	countdown(time)
 	print("\n" + nameTask + " DONE!!")
 	print('\a')
 
@@ -47,9 +59,9 @@ def restart():
 			
 try:
 	while True:
-		pomodoro = "1500"	# 25 min
-		shortBreak = "300"	# 5 min
-		longBreak = "1800"	# 30 min
+		pomodoro = 1500	# 25 min
+		shortBreak = 300	# 5 min
+		longBreak = 1800	# 30 min
 		nameTask = ""
 		
 		for x in range(4):	
@@ -69,18 +81,3 @@ try:
 			break
 except KeyboardInterrupt:
 	exit()
-
-'''	
-startTime = time.time()
-curTime = time.time()
-print(datetime.datetime.now())		
-try:
-	while True:	
-		input()
-		totalTime = round(time.time() - startTime, 2)/60
-		printTime = "{:12.2f}".format(totalTime)
-		print('Total time for %s: %s min' % (nameTask, printTime), end='')
-		
-except KeyboardInterrupt:
-	print('\nSaving to pomodoro.xlsx...')
-'''
