@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<style>
+	h1 {
+		color: red;
+	}
+	main {
+		font-family:  sans-serif;
+	}
+	.thin-red-border {
+		border-color: red;
+		border-width: 5px;
+		border-style: solid;
+		border-radius: 10px;
+	}
+	.red-background {
+		background-color: red;
+	}
+</style>
+<html>
+	<head>
+		<title>Hi!</title>
+	</head>
+	<main>
+	<body>
+	<h1>It's pomodoro time!</h1>
+	<p>The pomodoro technique is a widely used time management tool. Essentially, you work in spurts and take mini breaks in between sessions.</p>
+	<ol class="thin-red-border red-background">
+		<li>25 minute working period</li>
+		<li>5 minute break</li>
+		<li>repeat! (4 times)</li>
+	<ol>
+	<form action="/submit-helpful-data">
+	<label for="helpful">
+		<input id="helpful" value="helpful" type="radio" name="helpful-not helpful">Helpful
+	</label>
+	<label for="not helpful">
+		<input id="not helpful" value="not helpful" type="radio" name="helpful-not helpful">Not Helpful
+	</label>
+	<button type="submit">Submit</button>
+	</form>
+	</body>
+	</main>
+</html>
