@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <style>
 	h1 {
-		color: red;
+		color: #9172ff;
+		font-size: 30px;
+	}
+	h2 {
+		color: black;
+		font-size: 20px;
 	}
 	main {
 		font-family:  sans-serif;
@@ -10,25 +15,76 @@
 		border-color: red;
 		border-width: 5px;
 		border-style: solid;
-		border-radius: 10px;
+		border-radius: 60%;
+		margin-left: 100px;
+		margin-right: 100px;
 	}
 	.red-background {
 		background-color: red;
 	}
+	.green-background {
+		background-color: green;
+	}
+	.center {
+		text-align: center;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #9172ff;
+	}
+	li {
+		float: left;
+	}
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	li a:hover {
+		background-color: #5125ff;
+	}
+	.font-size {
+		font-size: 18px;
+	}
+	
 </style>
 <html>
 	<head>
-		<title>Hi!</title>
+		<title>Get it done</title>
+		<link rel="shortcut icon" href="plated.png"/>		
 	</head>
 	<main>
+	<ul>
+		<li><a href="default.asp">Pomodoro</a><li>
+		<li><a href="short.asp">Short Break</a><li>
+		<li><a href="long.asp">Long Break</a><li>
+	</ul>
 	<body>
-	<h1>It's pomodoro time!</h1>
-	<p>The pomodoro technique is a widely used time management tool. Essentially, you work in spurts and take mini breaks in between sessions.</p>
-	<ol class="thin-red-border red-background">
-		<li>25 minute working period</li>
-		<li>5 minute break</li>
-		<li>repeat! (4 times)</li>
-	<ol>
+	<h1 class="center">It's pomodoro time!</h1>
+	<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> is a widely used time management tool. Essentially, you work in spurts and take mini breaks in between sessions.</p>
+	<div class="thin-red-border center font-size">
+		<p>1. 25 minute working period</p>
+		<p>2. 5 minute break</p>
+		<p>3. repeat! (4 times)</p>
+	</div>
+	<h2>Instructions</h2>
+	<div class="font-size">
+		<p>Press "Start" to begin pomodoro cycle.</p>
+		<p>Press "Pause" to stop the timer.</p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<button type="button" class="green-background">Start</button>
+	<button type="button" class="red-background">Pause</button>
+	<button type="button">Reset</button>
+	<br>
+	<br>
 	<form action="/submit-helpful-data">
 	<label for="helpful">
 		<input id="helpful" value="helpful" type="radio" name="helpful-not helpful">Helpful
