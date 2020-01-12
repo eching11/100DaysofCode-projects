@@ -1,7 +1,7 @@
 # 100DaysofCode-projects
 All programs I've been working on during the 100DaysofCode challenge
 
-###Pomodoro
+##Pomodoro
 Command line timer based on the Pomodoro time management technique.
 
 
