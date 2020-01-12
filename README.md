@@ -1,14 +1,14 @@
 # 100DaysofCode-projects
 All programs I've been working on during the 100DaysofCode challenge
 
-##Pomodoro
+### Pomodoro
 Command line timer based on the Pomodoro time management technique.
 
 
-###Plated
+### Plated
 Weight-training helper program that tells you what plates and how many to put on each side of a bar.
 
-####Next enhancements
+#### Next enhancements
 1) Pomodoro Webpage (index.html)
 	* <s>create webpage for pomodoro</s>
 	* create instruction box border with background color
