@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<style>
+.nav-link {
+  background-color: black;
+  color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+@media (max-width: 100px)
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#box {
+  display: flex;
+  background-color: orangered;
+  width: 50%;
+  height: 50%;
+}
+</style>
+
+
+<html>
+  <header id="header">
+    <img src="https://stardewvalleywiki.com/mediawiki/images/a/a1/Dinosaur_Egg.png" id="header-img">
+    <nav id="nav-bar" class="nav-bar">
+      <a href="#header" class="nav-link">Getting Started</a>
+      <a href="#header" class="nav-link">Villagers</a>
+      <a href="#header" class="nav-link">Controls</a>
+    </nav> 
+  </header>
+  <main>   
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/lNUDbAvNk-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <form id="form" action="/email-submit" target="_self" method="get">
+      <input type="email" id="email" placeholder="Enter email address" name="email"></input>
+      <input type="submit" id="submit" value="Submit"></input>
+    </form>
+  </main>  
+  <footer>Disclaimer: I do not own any media here.</footer>
+</html>
