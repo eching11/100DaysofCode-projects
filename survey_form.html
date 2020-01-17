@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <main>
+    <h1 id="title">Survey Name</h1>
+    <p id="description">Take this survey to help us improve our services!</p>
+    <form id="survey-form">
+      <label id="name-label" for="name">Name</label><br>
+      <input type="text" id="name" id="name-label" placeholder="Enter your name" required><br>
+      <label id="email-label" for="email">Email</label><br>
+      <input type="email" id="email" placeholder="Enter your email" required><br>
+      <label id="number-label" for="number">Age (optional)</label><br>
+      <input type="number" id="number" min="18" max="99" placeholder="Enter your age"><br>
+      Which is your preferred game?</br>
+      <input list="dropdown">
+      <datalist id="dropdown">
+        <option value="Stardew Valley">
+        <option value="Minecraft">
+      </datalist><br>
+      Would you be interested in purchasing a new game you knew was similar to your preferred game?<br>
+      <label for="buy">
+        <input id="buy" type="radio" value="buy" name="buy">Yes, would buy.
+      </label>
+      <label for="notbuy">
+        <input id="notbuy" type="radio" value="not buy" name="buy">No, would not buy.<br>
+      </label>
+      What do you consider when purchasing a game? Check all that apply.<br>
+      <label for="challenging">
+        <input id="challenging" type="checkbox" value="challenging" name="considerations">Challenging
+      </label>
+      <label for="multiplayer">
+        <input id="multiplayer" type="checkbox" value="multiplayer" name="considerations">Multiplayer
+      </label>
+      <label for="online">
+        <input id="online" type="checkbox" value="online" name="considerations">Online
+      </label><br>
+      <textarea rows="3" cols="50">
+      Any additional comments?
+      </textarea>
+    <button type="submit" id="submit">Submit</button>
+    </form>
+  </main>
+</html>
