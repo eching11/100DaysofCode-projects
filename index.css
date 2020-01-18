@@ -10,6 +10,9 @@
 		color: white;
 		background: #1C86EE;
 	}
+	.navbar {
+		left: 0;
+	}
 	.thin-red-border {
 		border-color: red;
 		border-width: 5px;

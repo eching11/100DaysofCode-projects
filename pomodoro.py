@@ -22,8 +22,6 @@ def countdown(t):
 		print(timeformat, end='\r')
 		time.sleep(1)
 		t -= 1
-	print('Copying access code from current Url...\n')
-#countdown(67)
 
 def getName(nameTask):
 	print('Name of pomodoro task:')
