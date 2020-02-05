@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>Get it done</title>
 		<link rel="shortcut icon" href="plated.png"/>
-		<link rel="stylesheet" type="text/css" href="index.css">
-		<script src="js/script.js"></script>		
+		<link rel="stylesheet" type="text/css" href="index.css">	
 	</head>
 	<main>
 	<nav class="navbar">
@@ -15,7 +15,8 @@
 	</ul>
 	</nav>
 	<body>
-	<h1 class="center">It's pomodoro time!</h1>
+	<h1 class="center" >It's pomodoro time!</h1>
+	<h2 id="clock" class="center"></h2>
 	<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> is a widely used time management tool. Essentially, you work in spurts and take mini breaks in between sessions.</p>
 	<div class="thin-red-border center font-size">
 		<p>1. 25 minute working period</p>
@@ -23,12 +24,14 @@
 		<p>3. repeat! (4 times)</p>
 	</div>
 	<br>
+	
 	<br>
 	<br>
 	<button type="button" name="start" class="green-background button">Start</button>
 	<button type="button" name="pause" class="red-background button">Pause</button>
 	<button type="button" name="reset" class="blue-background button" onclick="revealMessage()">Reset</button>
-	<p id="hiddenMessage" style="display">Starting again!</p>
+	
+	<p id="hiddenMessage"></p>
 	<br>
 	<br>
 	<form action="/submit-helpful-data">
@@ -40,6 +43,7 @@
 	</label>
 	<button type="submit" class="black-background submit-button" target="_blank">Submit</button>
 	</form>
+	<script src="main.js"></script>	
 	</body>
 	</main>
 </html>
