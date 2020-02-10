@@ -25,7 +25,7 @@ function startTimer(duration, display, type) {
 		if (0 > timer) {
 			timer = duration;
 			
-			if (type === "") {
+			if (type === "pomodoro") {
 				counter = counter + 1;
 			}
 			stopTimer();
