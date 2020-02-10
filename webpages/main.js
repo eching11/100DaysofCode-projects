@@ -31,16 +31,17 @@ function startTimer(duration, display) {
 
 function stopTimer() {
 	clearInterval(stopwatch);
+	window.alert("Session ended!")
 }
 
-document.getElementById("start").onclick = function() {
+document.getElementById("pomodoro").onclick = function() {
 	var pomodoro = 60 * 25, 
-		display = document.querySelector('#time');
+		display = document.querySelector('#pomodoro');
 	startTimer(pomodoro, display);
 }
 
 document.getElementById("short").onclick = function() {
-	var short_break = 60 * 0.1,
+	var short_break = 60 * 0.05,
 		display = document.querySelector('#short');
 	startTimer(short_break, display);
 }
