@@ -11,7 +11,7 @@ function myTimer() {
 // startTimer function from https://stackoverflow.com/a/20618517
 function startTimer(duration, display) {
 	var timer = duration, minutes, seconds;
-	setInterval(function() {
+	stopwatch = setInterval(function() {
 		minutes = parseInt(timer / 60, 10);
 		seconds = parseInt(timer % 60, 10);
 		
@@ -22,11 +22,16 @@ function startTimer(duration, display) {
 		timer = timer - 1;
 		if (0 > timer) {
 			timer = duration;
+			stopTimer();
 		}
 		
 	}, 1000)
+
 };
 
+function stopTimer() {
+	clearInterval(stopwatch);
+}
 
 document.getElementById("start").onclick = function() {
 	var pomodoro = 60 * 25, 
@@ -35,7 +40,7 @@ document.getElementById("start").onclick = function() {
 }
 
 document.getElementById("short").onclick = function() {
-	var short_break = 60 * 5,
+	var short_break = 60 * 0.1,
 		display = document.querySelector('#short');
 	startTimer(short_break, display);
 }
