@@ -27,8 +27,21 @@ function startTimer(duration, display) {
 	}, 1000)
 };
 
-window.onload = function() {
+
+document.getElementById("start").onclick = function() {
 	var pomodoro = 60 * 25, 
 		display = document.querySelector('#time');
 	startTimer(pomodoro, display);
+}
+
+document.getElementById("short").onclick = function() {
+	var short_break = 60 * 5,
+		display = document.querySelector('#short');
+	startTimer(short_break, display);
+}
+
+document.getElementById("long").onclick = function() {
+	var short_break = 60 * 10,
+		display = document.querySelector('#long');
+	startTimer(short_break, display);
 }

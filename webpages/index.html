@@ -9,9 +9,9 @@
 	<main>
 	<nav class="navbar">
 	<ul>
-		<li><a href="default.asp">Pomodoro</a><li>
-		<li><a href="short.asp">Short Break</a><li>
-		<li><a href="long.asp">Long Break</a><li>
+		<li><a href="index.html">Pomodoro</a><li>
+		<li><a href="index.html">Short Break</a><li>
+		<li><a href="index.html">Long Break</a><li>
 	</ul>
 	</nav>
 	<body>
@@ -24,13 +24,14 @@
 		<p>3. repeat! (4 times)</p>
 	</div>
 	<br>
-	<h2 class="center"><span id="time">25:00</span></h2>
-
+	<h2 class="center"><span id="time">Pomodoro - 25:00</span></h2>
+	<h2 class="center"><span id="short" onclick="short()">Short Break - 5:00</span></h2>
+	<h2 class="center"><span id="long" onclick="long()">Long Break - 10:00</span></h2>
 	<br>
 	<br>
-	<button type="button" name="start" class="green-background button">Start</button>
+	<button type="button" name="start" class="green-background button" onclick="start()" id="start">Start</button>
 	<button type="button" name="pause" class="red-background button">Pause</button>
-	<button type="button" name="reset" class="blue-background button" onclick="revealMessage()">Reset</button>
+	<button type="button" name="reset" class="blue-background button">Reset</button>
 	
 	<p id="hiddenMessage"></p>
 	<br>
