@@ -1,3 +1,5 @@
+var counter = 0;
+
 function revealMessage() {
 	document.getElementById("hiddenMessage").innerHTML = "Starting Again...";
 }
@@ -9,9 +11,9 @@ function myTimer() {
 }
 
 // startTimer function from https://stackoverflow.com/a/20618517
-function startTimer(duration, display) {
+function startTimer(duration, display, type) {
 	var timer = duration, minutes, seconds;
-	setInterval(function() {
+	stopwatch = setInterval(function() {
 		minutes = parseInt(timer / 60, 10);
 		seconds = parseInt(timer % 60, 10);
 		
@@ -22,26 +24,37 @@ function startTimer(duration, display) {
 		timer = timer - 1;
 		if (0 > timer) {
 			timer = duration;
+			
+			if (type === "pomodoro") {
+				counter = counter + 1;
+			}
+			stopTimer();
 		}
 		
 	}, 1000)
+
 };
 
+function stopTimer() {
+	clearInterval(stopwatch);
+	window.alert("Session ended!")
+	document.getElementById("tally").innerHTML = counter;
+}
 
-document.getElementById("start").onclick = function() {
+document.getElementById("pomodoro").onclick = function() {
 	var pomodoro = 60 * 25, 
-		display = document.querySelector('#time');
-	startTimer(pomodoro, display);
+		display = document.querySelector('#pomodoro');
+	startTimer(pomodoro, display, "pomodoro");
 }
 
 document.getElementById("short").onclick = function() {
-	var short_break = 60 * 5,
+	var short_break = 60 * 0.05,
 		display = document.querySelector('#short');
-	startTimer(short_break, display);
+	startTimer(short_break, display, "");
 }
 
 document.getElementById("long").onclick = function() {
 	var short_break = 60 * 10,
 		display = document.querySelector('#long');
-	startTimer(short_break, display);
+	startTimer(short_break, display, "");
 }
