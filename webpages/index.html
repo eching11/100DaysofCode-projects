@@ -5,6 +5,7 @@
 		<title>Get it done</title>
 		<link rel="shortcut icon" href="../images/plated.png"/>
 		<link rel="stylesheet" type="text/css" href="index.css">	
+		
 	</head>
 	<main>
 	<nav class="navbar">
@@ -15,7 +16,7 @@
 	</ul>
 	</nav>
 	<body>
-	<h1 class="center" >It's pomodoro time!</h1>
+	<h1 class="center"><span onclick="highlight('Pomodoro')" id="searchText">It's Pomodoro time!</span></h1>
 	<h2 id="clock" class="center"></h2>
 	<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> is a widely used time management tool. Essentially, you work in spurts and take mini breaks in between sessions.</p>
 	<div class="thin-red-border center font-size">
@@ -25,11 +26,11 @@
 	</div>
 	<br>
 	<div>
-		<h2 class="center"><span  onclick="highlight('Pomodoro')" id="searchText">Pomodoro</span></h2>
+		<h2 class="center"><span>Pomodoro</span></h2>
 		<h2 class="center"><span id="pomodoro" onclick="pomodoro()">25:00</span></h2>
 	</div>
 	<h2 class="center"><span id="short" onclick="short()">Short Break - 5:00</span></h2>
-	<h2 class="center"><span id="long" onclick="long()">Long Break - 10:00</span></h2>
+	<h2 class="center"><span id="long" onclick="long()">Long Break - 20:00</span></h2>
 	<br>
 	<h3 class="center"><u>Pomodoro Tally</u></h3>
 	<p id="tally" class="center"></p>

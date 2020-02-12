@@ -62,6 +62,48 @@ document.getElementById("long").onclick = function() {
 	startTimer(short_break, display, type);
 }
 
+// Define timer objects
+var pomodoro = {
+	name: "pomodoro",
+	length: 25,
+	status: "off"
+};
+
+var shortBreak = {
+	name: "short",
+	length: 5,
+	status: "off"
+};
+
+var longBreak = {
+	name: "long",
+	length: 20,
+	status: "off"
+};
+
+
+function toggle(obj) {
+	if (obj.status === "off") {
+		obj.status = "on";
+	} else {
+		obj.status = "off";
+	}
+}
+// outputs "off"
+console.log(longBreak.status);
+toggle(longBreak);
+// outputs "on"
+console.log(longBreak.status);
+
+// Switch on/off -- switch object property
+var switched = "off"
+function toggle() {
+	if (switched === "off") {
+		switched = "on";
+	} else {
+		switched = "off";
+	}
+}
 var select = "";
 // Highlight selected timer function from https://stackoverflow.com/a/8644513
 function highlight(text) {
@@ -75,3 +117,7 @@ function highlight(text) {
 	}
 }
 
+
+console.log(switched);
+
+window.alert(toggle);
