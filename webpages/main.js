@@ -44,17 +44,34 @@ function stopTimer() {
 document.getElementById("pomodoro").onclick = function() {
 	var pomodoro = 60 * 25, 
 		display = document.querySelector('#pomodoro');
-	startTimer(pomodoro, display, "pomodoro");
+	//select = "pomodoro";
+	startTimer(pomodoro, display, type);
 }
 
 document.getElementById("short").onclick = function() {
 	var short_break = 60 * 0.05,
 		display = document.querySelector('#short');
-	startTimer(short_break, display, "");
+	//select = "short";
+	startTimer(short_break, display, type);
 }
 
 document.getElementById("long").onclick = function() {
 	var short_break = 60 * 10,
 		display = document.querySelector('#long');
-	startTimer(short_break, display, "");
+	//select = "long;"
+	startTimer(short_break, display, type);
 }
+
+var select = "";
+// Highlight selected timer function from https://stackoverflow.com/a/8644513
+function highlight(text) {
+	var searchText = document.getElementById("searchText");
+	var innerHTML = searchText.innerHTML;
+	var index = innerHTML.indexOf(text);
+	if (index >= 0) {
+		innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index + text.length) + "</span>" + innerHTML.substring(index + text.length);
+		searchText.innerHTML = innerHTML;
+		select = text;
+	}
+}
+
