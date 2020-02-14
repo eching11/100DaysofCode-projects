@@ -1,4 +1,17 @@
-var counter = 0;
+//When timer obj is on and user clicks start button, start that timer.
+function Timer (name, length, status) {
+	this.name = name;
+	this.length = length;
+	this.status = status;
+}
+
+// Define timer objects
+var pomodoro = new Timer("pomodoro", 25, "off");
+pomodoro.count = 0;
+var shortBreak = new Timer ("short", 5, "off");
+var longBreak = new Timer ("long", 20, "off");
+
+
 var select = "";
 // Highlight selected timer function from https://stackoverflow.com/a/8644513
 function highlight(text) {
@@ -19,9 +32,16 @@ function myTimer() {
 	document.getElementById("clock").innerHTML = time.toLocaleTimeString();
 }
 
+
+function stopTimer() {
+	clearInterval(stopwatch);
+	window.alert("Session ended!")
+	document.getElementById("tally").innerHTML = pomodoro.count;
+};
+
 // startTimer function from https://stackoverflow.com/a/20618517
-function startTimer(duration, display, type) {
-	var timer = duration, minutes, seconds;
+function startTimer(obj, display) {
+	var timer = obj.length * 60, minutes, seconds;
 	stopwatch = setInterval(function() {
 		minutes = parseInt(timer / 60, 10);
 		seconds = parseInt(timer % 60, 10);
@@ -32,10 +52,9 @@ function startTimer(duration, display, type) {
 		display.textContent = minutes + ":" + seconds;
 		timer = timer - 1;
 		if (0 > timer) {
-			timer = duration;
-			
-			if (type === "pomodoro") {
-				counter = counter + 1;
+			timer = obj.length;			
+			if (obj.name === "pomodoro") {
+				pomodoro.count = pomodoro.count + 1;
 			}
 			stopTimer();
 		}
@@ -44,57 +63,20 @@ function startTimer(duration, display, type) {
 
 };
 
-function stopTimer() {
-	clearInterval(stopwatch);
-	window.alert("Session ended!")
-	document.getElementById("tally").innerHTML = counter;
-};
-
 document.getElementById("pomodoro").onclick = function() {
-	var pomodoro = 60 * 25, 
-		display = document.querySelector('#pomodoro');
-	var type = "pomodoro";	
-	startTimer(pomodoro, display, type);
+	var display = document.querySelector('#pomodoro');
+	startTimer(pomodoro, display);
 }
 
 document.getElementById("short").onclick = function() {
-	var short_break = 60 * 5,
-		display = document.querySelector('#short');
-	var type = "short";
-	startTimer(short_break, display, type);
+	var display = document.querySelector('#short');
+	startTimer(shortBreak, display);
 }
 
 document.getElementById("long").onclick = function() {
-	var short_break = 60 * 20,
-		display = document.querySelector('#long');
-	var type = "long;"
-	startTimer(short_break, display, type);
+	var display = document.querySelector('#long');
+	startTimer(longBreak, display);
 }
-
-/*
-When timer obj is on and user clicks start button, start that timer.
-
-
-*/
-// Define timer objects
-var pomodoro = {
-	name: "pomodoro",
-	length: 25,
-	status: "off"
-};
-
-var shortBreak = {
-	name: "short",
-	length: 5,
-	status: "off"
-};
-
-var longBreak = {
-	name: "long",
-	length: 20,
-	status: "off"
-};
-
 
 function toggle(obj) {
 	if (obj.status === "off") {
