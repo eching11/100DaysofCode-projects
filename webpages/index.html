@@ -25,16 +25,27 @@
 		<p>3. repeat! (4 times)</p>
 	</div>
 	<br>
-	<h2 class="center"><span id="pomodoro" onclick="pomodoro()">25:00</span></h2>
+	<h2 class="center"><span id="bigben" onclick="bigben()">XX:XX</span></h2>
+	
+	<div class="center">
+		<input type="radio" id="first" name="timer" value="pomodoro"/>
+		<label for="first">Pomodoro</label>
+		<input id="second" type="radio" name="timer" value="short"/>
+		<label for="second">Short Break</label>
+		<input id="third" type="radio" name="timer" value="long"/>
+		<label for="third">Long Break</label>
+	</div>
+	
+	<!--<h2 class="center"><span id="pomodoro" onclick="pomodoro()">25:00</span></h2>
 	<h2 class="center"><span id="short" onclick="short()">Short Break - 5:00</span></h2>
-	<h2 class="center"><span id="long" onclick="long()">Long Break - 20:00</span></h2>
+	<h2 class="center"><span id="long" onclick="long()">Long Break - 20:00</span></h2>-->
+	
 	<br>
-
 	<br>
 	<div class="center">
-		<button type="button" name="start" class="green-background button">Start</button>
-		<button type="button" name="pause" class="red-background button">Pause</button>
-		<button type="button" name="reset" class="blue-background button">Reset</button>
+		<button type="button" name="start" class="green-background button" id="start">Start</button>
+		<button type="button" name="pause" class="red-background button" id="pause">Pause</button>
+		<button type="button" name="reset" class="blue-background button" id="reset">Reset</button>
 	</div>
 	<h3 class="center"><u>Pomodoro Tally</u></h3>
 	<p id="tally" class="center"></p><br>
