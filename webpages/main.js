@@ -40,7 +40,21 @@ document.getElementById('choices').onclick = function() {
 	}
 }
 
-function stopTimer(timerName) {
+document.getElementById("reset").onclick = function() {
+	clearInterval(stopwatch);
+	var display = document.querySelector('#bigben');
+	if (choice === "pomodoro") {
+		startTimer(pomodoro, display);
+	} else if (choice === "short"){
+		startTimer(shortBreak, display);
+	} else if (choice === "long"){
+		startTimer(longBreak, display);
+	} else {
+		return;
+	}
+}
+
+function stopTimer() {
 	clearInterval(stopwatch);
 }
 
