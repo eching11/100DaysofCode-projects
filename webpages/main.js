@@ -10,8 +10,6 @@ pomodoro.count = 0;
 var shortBreak = new Timer ("short", 5);
 var longBreak = new Timer ("long", 20);
 
-
-var select = "";
 // Highlight selected timer function from https://stackoverflow.com/a/8644513
 function highlight(text) {
 	var searchText = document.getElementById("searchText");
@@ -20,7 +18,6 @@ function highlight(text) {
 	if (index >= 0) {
 		innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index + text.length) + "</span>" + innerHTML.substring(index + text.length);
 		searchText.innerHTML = innerHTML;
-		select = text;
 	}
 };
 
@@ -30,6 +27,7 @@ function myTimer() {
 	var time = new Date();
 	document.getElementById("clock").innerHTML = time.toLocaleTimeString();
 }
+
 var choice;
 document.getElementById('choices').onclick = function() {
 	
@@ -40,10 +38,23 @@ document.getElementById('choices').onclick = function() {
 	} else if (document.getElementById('r3').checked) {
 		choice = document.getElementById('r3').value;
 	}
-	//result.innerHTML = 'Your choice: ' + choice;
 }
 
-function stopTimer(timerName) {
+document.getElementById("reset").onclick = function() {
+	clearInterval(stopwatch);
+	var display = document.querySelector('#bigben');
+	if (choice === "pomodoro") {
+		startTimer(pomodoro, display);
+	} else if (choice === "short"){
+		startTimer(shortBreak, display);
+	} else if (choice === "long"){
+		startTimer(longBreak, display);
+	} else {
+		return;
+	}
+}
+
+function stopTimer() {
 	clearInterval(stopwatch);
 }
 
@@ -98,12 +109,7 @@ document.getElementById("start").onclick = function() {
 document.getElementById("stop").onclick = function() {
 	stopTimer();
 }
-/*
-document.getElementById("pomodoro").onclick = function() {
-	var display = document.querySelector('#pomodoro');
-	startTimer(pomodoro, display);
-}
-*/
+
 function toggle(obj) {
 	if (obj.status === "off") {
 		obj.status = "on";
