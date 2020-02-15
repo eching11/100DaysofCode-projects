@@ -1,15 +1,14 @@
 //When timer obj is on and user clicks start button, start that timer.
-function Timer (name, length, status) {
+function Timer (name, length) {
 	this.name = name;
 	this.length = length;
-	this.status = status;
 }
 
 // Define timer objects
-var pomodoro = new Timer("pomodoro", 25, "on");
+var pomodoro = new Timer("pomodoro", 25);
 pomodoro.count = 0;
-var shortBreak = new Timer ("short", 5, "off");
-var longBreak = new Timer ("long", 20, "off");
+var shortBreak = new Timer ("short", 5);
+var longBreak = new Timer ("long", 20);
 
 
 var select = "";
@@ -31,7 +30,22 @@ function myTimer() {
 	var time = new Date();
 	document.getElementById("clock").innerHTML = time.toLocaleTimeString();
 }
+	var choice;
+document.getElementById('choices').onclick = function() {
+	
+	if (document.getElementById('r1').checked) {
+		choice = document.getElementById('r1').value;
+	} else if (document.getElementById('r2').checked) {
+		choice = document.getElementById('r2').value;
+	} else if (document.getElementById('r3').checked) {
+		choice = document.getElementById('r3').value;
+	}
+	result.innerHTML = 'Your choice: ' + choice;
+}
 
+function freezeTimer() {
+
+}
 
 function stopTimer(timerName) {
 	clearInterval(stopwatch);
@@ -69,11 +83,11 @@ function startTimer(obj, display) {
 
 document.getElementById("start").onclick = function() {
 	var display = document.querySelector('#bigben');
-	if (pomodoro.status === "on") {
+	if (choice === "pomodoro") {
 		startTimer(pomodoro, display);
-	} else if (shortBreak.status === "on"){
+	} else if (choice === "short"){
 		startTimer(shortBreak, display);
-	} else if (longBreak.status === "on"){
+	} else if (choice === "long"){
 		startTimer(longBreak, display);
 	} else {
 		return;
