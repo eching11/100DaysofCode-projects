@@ -30,7 +30,7 @@ function myTimer() {
 	var time = new Date();
 	document.getElementById("clock").innerHTML = time.toLocaleTimeString();
 }
-	var choice;
+var choice;
 document.getElementById('choices').onclick = function() {
 	
 	if (document.getElementById('r1').checked) {
@@ -40,14 +40,15 @@ document.getElementById('choices').onclick = function() {
 	} else if (document.getElementById('r3').checked) {
 		choice = document.getElementById('r3').value;
 	}
-	result.innerHTML = 'Your choice: ' + choice;
-}
-
-function freezeTimer() {
-
+	//result.innerHTML = 'Your choice: ' + choice;
 }
 
 function stopTimer(timerName) {
+	clearInterval(stopwatch);
+}
+
+
+function zeroTimer(timerName) {
 	clearInterval(stopwatch);
 	window.alert("Session ended!")
 	document.getElementById("tally").innerHTML = pomodoro.count;
@@ -73,7 +74,7 @@ function startTimer(obj, display) {
 			if (obj.name === "pomodoro") {
 				pomodoro.count = pomodoro.count + 1;
 			}
-			stopTimer(obj.name);
+			zeroTimer(obj.name);
 		}
 		
 	}, 1000)
@@ -92,6 +93,10 @@ document.getElementById("start").onclick = function() {
 	} else {
 		return;
 	}
+}
+
+document.getElementById("stop").onclick = function() {
+	stopTimer();
 }
 /*
 document.getElementById("pomodoro").onclick = function() {
