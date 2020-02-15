@@ -27,15 +27,16 @@
 	<br>
 	<h2 class="center"><span id="bigben" onclick="bigben()">XX:XX</span></h2>
 	
-	<div class="center">
-		<input type="radio" id="first" name="timer" value="pomodoro"/>
-		<label for="first">Pomodoro</label>
-		<input id="second" type="radio" name="timer" value="short"/>
-		<label for="second">Short Break</label>
-		<input id="third" type="radio" name="timer" value="long"/>
-		<label for="third">Long Break</label>
+	<div class="center" id="choices" name="choices">
+		<input type="radio" id="r1" name="timer" value="pomodoro"/>
+		<label for="r1">Pomodoro</label>
+		<input id="r2" type="radio" name="timer" value="short"/>
+		<label for="r2">Short Break</label>
+		<input id="r3" type="radio" name="timer" value="long"/>
+		<label for="r3">Long Break</label>
+		
 	</div>
-	
+	<span id="result"></span>
 	<!--<h2 class="center"><span id="pomodoro" onclick="pomodoro()">25:00</span></h2>
 	<h2 class="center"><span id="short" onclick="short()">Short Break - 5:00</span></h2>
 	<h2 class="center"><span id="long" onclick="long()">Long Break - 20:00</span></h2>-->
