@@ -18,25 +18,26 @@
 	<body>
 	<h1 class="center"><span onclick="highlight('Pomodoro')" id="searchText">It's Pomodoro time!</span></h1>
 	<h2 id="clock" class="center"></h2>
-	<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> is a widely used time management tool. Essentially, you work in spurts and take mini breaks in between sessions.</p>
+	<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">pomodoro technique</a> is a widely used time management tool. Get things done faster when you work in spurts.</p>
 	<div class="thin-red-border center font-size">
 		<p>1. 25 minute working period</p>
 		<p>2. 5 minute break</p>
-		<p>3. repeat! (4 times)</p>
+		<p>3. repeat #1 & #2! (4 times)</p>
+		<p>4. Take a long break</p>
 	</div>
 	<br>
-	<h2 class="center"><span id="bigben" onclick="bigben()">XX:XX</span></h2>
-	
+	<h2 class="center"><span id="bigben" onclick="bigben()">00:00</span></h2>
+
 	<div class="center" id="choices" name="choices">
-		<input type="radio" id="r1" name="timer" value="pomodoro"/>
+		<input id="r1" type="radio" name="timer" value="pomodoro"/>
 		<label for="r1">Pomodoro</label>
 		<input id="r2" type="radio" name="timer" value="short"/>
 		<label for="r2">Short Break</label>
 		<input id="r3" type="radio" name="timer" value="long"/>
 		<label for="r3">Long Break</label>
-		
-	</div>
-	<span id="result"></span>
+	</div>	
+
+
 	<!--<h2 class="center"><span id="pomodoro" onclick="pomodoro()">25:00</span></h2>
 	<h2 class="center"><span id="short" onclick="short()">Short Break - 5:00</span></h2>
 	<h2 class="center"><span id="long" onclick="long()">Long Break - 20:00</span></h2>-->
@@ -51,12 +52,12 @@
 	<h3 class="center"><u>Pomodoro Tally</u></h3>
 	<p id="tally" class="center"></p><br>
 	<br>
-	<form action="/submit-helpful-data">
+	<form id="helpForm">
 	<label for="helpful">
-		<input id="helpful" value="helpful" type="radio" name="helpful-not helpful">Helpful
+		<input id="helpful" value="helpful" type="radio" name="help">Helpful
 	</label>
 	<label for="not helpful">
-		<input id="not helpful" value="not helpful" type="radio" name="helpful-not helpful">Not Helpful
+		<input id="not helpful" value="not helpful" type="radio" name="help">Not Helpful
 	</label>
 	<button type="submit" class="black-background submit-button" target="_blank">Submit</button>
 	</form>
