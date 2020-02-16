@@ -10,7 +10,7 @@ pomodoro.count = 0;
 var shortBreak = new Timer ("short", 5);
 var longBreak = new Timer ("long", 20);
 
-// Highlight selected timer function from https://stackoverflow.com/a/8644513
+// Highlight function from https://stackoverflow.com/a/8644513
 function highlight(text) {
 	var searchText = document.getElementById("searchText");
 	var innerHTML = searchText.innerHTML;
@@ -39,6 +39,7 @@ document.getElementById('choices').onclick = function() {
 		choice = document.getElementById('r3').value;
 	}
 }
+
 
 document.getElementById("reset").onclick = function() {
 	clearInterval(stopwatch);
@@ -116,4 +117,31 @@ function toggle(obj) {
 	} else {
 		obj.status = "off";
 	}
+}
+
+/*
+window.onload = function() {
+	document.getElementById('helpForm').onsubmit = function() {
+	
+	alert('Thanks for submitting your feedback!');
+	// return false to prevent form default behavior
+	return false;
+	}
+}
+*/
+// processForm function from https://stackoverflow.com/a/5384732
+function processForm(e) {
+	if (e.preventDefault) e.preventDefault();
+	alert('Thanks for submitting your feedback!');
+	
+
+	// return false to stop form default behavior
+	return false
+}
+
+var form = document.getElementById('helpForm');
+if (form.attachEvent) {
+	form.attachEvent("submit", processForm);
+} else {
+	form.addEventListener("submit", processForm);
 }
