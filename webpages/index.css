@@ -9,6 +9,8 @@
 		font-family:  sans-serif;
 		color: white;
 		background: #1C86EE;
+		max-width: 900px;
+		text-align: center;
 	}
 	.navbar {
 		left: 0;
