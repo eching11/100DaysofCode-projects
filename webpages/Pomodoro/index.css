@@ -1,27 +1,42 @@
 	h1 {
-		font-size: 30px;
+		font-size: 35px;
 	}
 	h2 {
 		color: white;
 		font-size: 20px;
 	}
 	main {
-		font-family:  sans-serif;
+		font-family: 'Roboto Condensed', sans-serif;
 		color: white;
 		background: #1C86EE;
-		max-width: 900px;
 		text-align: center;
+		font-size: 25px;
+		padding-top: 30px;
 	}
-	.navbar {
-		left: 0;
+	#wiki-link {
+		text-decoration: none;
 	}
-	.thin-red-border {
-		border-color: red;
-		border-width: 5px;
-		border-style: solid;
-		border-radius: 60%;
-		margin-left: 100px;
-		margin-right: 100px;
+
+	#navbar {
+		font-size: 20px;
+		top: 8px;
+		position: fixed;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		opacity: 0.75;
+		background-color: #9172ff;
+		
+	}
+
+	.nav-link {
+		text-decoration: none;
+
+	}
+	a:hover {
+		color: white;
+
 	}
 	.gray-box {
 		border-color: gray;
@@ -52,7 +67,7 @@
 		overflow: hidden;
 		background-color: #9172ff;
 	}
-	li {
+	/* li {
 		float: left;
 	}
 	li a {
@@ -65,9 +80,7 @@
 	li a:hover {
 		background-color: #ff87c3;
 	}
-	.font-size {
-		font-size: 18px;
-	}
+	*/
 	.button {
 		border: none;
 		color: white;
@@ -92,3 +105,38 @@
 	.highlight {
 		color: #f44336;
 	}
+
+#explanation {
+	z-index: 1;
+}
+/* #tomato-section {
+	
+	
+} */
+#tomato {
+	width: 35%;
+	height: auto;
+	opacity: 0.55;
+	z-index: 0;
+	position: absolute;
+	
+	
+
+}
+
+body {
+	z-index: 1;
+}
+
+footer {
+	font-size: 14px;
+	padding-top: 5px;
+	z-index: 2;
+	opacity: 0.75;
+	background-color: #9172ff;
+	margin-top: 30px;
+}
+
+#footer a{
+	text-decoration: none;
+}

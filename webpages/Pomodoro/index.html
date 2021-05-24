@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- SEO and author name added here-->
+		<meta charset="utf-8">
+		<title>Get it done</title>
+		<meta name = "description" content = "pomodoro">
+		<meta name = "author" content = "Erica Ching">
+		<link rel="shortcut icon" href="../images/plated.png"/>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		
+		<!-- import google font Roboto Condensed light-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" 
+		rel="stylesheet"> 
+		
+	</head>
+
+	<main>
+	
+	<!--NAVBAR under construction-->
+	<nav id="navbar" class = "navbar">
+	
+		<a class = "nav-link" href="index.html">Pomodoro</a>
+		<a class = "nav-link" href="index.html">Short Break</a>
+		<a class = "nav-link" href="index.html">Long Break</a>
+	
+	</nav>
+
+	<body>
+		<h1 class="center"><span onclick="highlight('Pomodoro')" 
+			id="searchText"><str>It's Pomodoro time!</str></span></h1>
+
+		<h2 id="clock" class="center"></h2>
+		<p>The <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" 
+			id=wiki-link 
+			alt="A link to a WikiPedia article about the Pomodoro Timer.">Pomodoro Technique</a> 
+			is a widely used time management tool. Get things done faster when you work in spurts.</p>
+		
+		<!-- the tomato background object under construction-->
+		<!-- <div id ="tomato-section">
+			<img src =	https://pngimg.com/uploads/tomato/tomato_PNG12591.png 
+			alt="A large round juicy red tomato." id="tomato">
+		</div>
+		-->
+
+		<!--instructions-->
+		<div class="thin-red-border center font-size" 
+		id="explanation">
+			<ol>
+				<li>Complete an uninterrupted 25 minute working period.</li>
+				<li>Then, take a quick 5 minute break.</li>
+				<li>Repeat steps 1 & 2 for 4 times total.</li>
+				<li>Finally, after all that productivity, take a long break of 15-30 minutes.</li>
+			</ol>	
+		</div>
+		
+		<!--shows the current time-->
+		<div id = "clock">
+			<h2 class="center"><span id="bigben" onclick="bigben()">00:00</span></h2>
+		</div>
+		<br>
+
+		<div class="center" id="choices" name="choices">
+			<input id="r1" 
+			type="radio" 
+			name="timer" 
+			value="pomodoro"/>
+			<label for="r1">Pomodoro</label>
+
+			<input id="r2" 
+			type="radio" 
+			name="timer" 
+			value="short"/>
+			<label for="r2">Short Break</label>
+
+			<input id="r3" 
+			type="radio" 
+			name="timer" 
+			value="long"/>
+			<label for="r3">Long Break</label>
+		</div>	
+
+
+		<!--<h2 class="center"><span id="pomodoro" onclick="pomodoro()">25:00</span></h2>
+		<h2 class="center"><span id="short" onclick="short()">Short Break - 5:00</span></h2>
+		<h2 class="center"><span id="long" onclick="long()">Long Break - 20:00</span></h2>-->
+		
+		<br>
+		<br>
+		
+
+		<!-- buttons for pomodoro timer-->
+		<div class="center">
+			<!-- start button-->
+			<button type="button" 
+			name="start" 
+			class="green-background button" 
+			id="start">Start</button>
+
+			<!--stop button-->
+			<button type="button" 
+			name="stop" 
+			class="red-background button" 
+			id="stop">Stop</button>
+
+			<!--reset button, still need a functioning pause button-->
+			<button type="button" 
+			name="reset" 
+			class="blue-background button" 
+			id="reset">Reset</button>
+		</div>
+		<br>
+
+		<!-- feedback section with radio buttons-->
+		<div id = "feedback-tally">
+			<h3 class="center"><u>Pomodoro Tally</u></h3>
+			<p id="tally" class="center"></p>
+			
+			<form id="helpForm">
+			<label for="helpful">
+				<input id="helpful" value="helpful" type="radio" name="help">Helpful
+			</label>
+			<label for="not helpful">
+				<input id="not helpful" value="not helpful" type="radio" name="help">Not Helpful
+			</label>
+			<button type="submit" class="black-background submit-button" target="_blank">Submit</button>
+			</form>
+		</div>
+
+		<script src="main.js"></script>	
+	</body>
+
+	<!--footer with creator/contribution credits-->
+	<div id="footer-container">
+		<footer id = "footer" class = "footer">
+			Made with ❤️ by <a href = "https://github.com/eching11">Erica</a> 
+			and contributions from <a href = "https://github.com/Sunnfast">Simone</a>.
+		</footer>
+	</div>
+
+	</main>
+</html>
