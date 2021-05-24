@@ -1,0 +1,142 @@
+	h1 {
+		font-size: 35px;
+	}
+	h2 {
+		color: white;
+		font-size: 20px;
+	}
+	main {
+		font-family: 'Roboto Condensed', sans-serif;
+		color: white;
+		background: #1C86EE;
+		text-align: center;
+		font-size: 25px;
+		padding-top: 30px;
+	}
+	#wiki-link {
+		text-decoration: none;
+	}
+
+	#navbar {
+		font-size: 20px;
+		top: 8px;
+		position: fixed;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		opacity: 0.75;
+		background-color: #9172ff;
+		
+	}
+
+	.nav-link {
+		text-decoration: none;
+
+	}
+	a:hover {
+		color: white;
+
+	}
+	.gray-box {
+		border-color: gray;
+		border-width: 3px;
+		border-style: solid;
+		background-color: gray;
+		margin-right: 800px;
+	}
+	.red-background {
+		background-color: #f44336;
+	}
+	.green-background {
+		background-color: #4CAF50;
+	}
+	.blue-background {
+		background-color: #4169E1;
+	}
+	.black-background {
+		background-color: #555555;
+	}
+	.center {
+		text-align: center;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #9172ff;
+	}
+	/* li {
+		float: left;
+	}
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	li a:hover {
+		background-color: #ff87c3;
+	}
+	*/
+	.button {
+		border: none;
+		color: white;
+		padding: 10px 40px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 18px;
+		border-radius: 4px;
+	}
+	.submit-button {
+		border: none;
+		color: white;
+		padding: 5px 10px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 18px;
+		border-radius: 4px;
+	}
+	
+	.highlight {
+		color: #f44336;
+	}
+
+#explanation {
+	z-index: 1;
+}
+/* #tomato-section {
+	
+	
+} */
+#tomato {
+	width: 35%;
+	height: auto;
+	opacity: 0.55;
+	z-index: 0;
+	position: absolute;
+	
+	
+
+}
+
+body {
+	z-index: 1;
+}
+
+footer {
+	font-size: 14px;
+	padding-top: 5px;
+	z-index: 2;
+	opacity: 0.75;
+	background-color: #9172ff;
+	margin-top: 30px;
+}
+
+#footer a{
+	text-decoration: none;
+}
